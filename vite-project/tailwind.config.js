@@ -10,9 +10,9 @@ export default {
         'e9f2f4': '#e9f2f4',
       },
       
-      
     },
   },
-  
+  variants: {},
+
   plugins: [],
 }
