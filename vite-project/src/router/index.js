@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from '../view/Home.vue'
 import IntroPage from '../view/IntroPage.vue'
 import NoticeBoard from '../view/NoticeBoard.vue'
+import ReadPage from '../view/ReadPage.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -19,6 +20,10 @@ export default createRouter({
         {
             path: '/notice',
             component: NoticeBoard
+        },
+        {
+            path: '/read',
+            component: ReadPage
         }
     ]
 })

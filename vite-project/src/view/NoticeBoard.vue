@@ -35,12 +35,12 @@
 
 <template>
   <div id="notice_page">
-    <h1> 공지사항 </h1>
-    <div class="notice_board">
-      <table class="container table-auto text-gray-900 text-center">
+    <div class="text-xl ml-24"> 공지사항 </div>
+    <div class="flex justify-center ">
+      <table class="container table-auto text-gray-900 text-center p-8">
         <thead>
           <tr>
-            <th></th>
+            <th>2</th>
             <th>제목</th>
             <th>작성자</th>
             <th>작성일</th>
@@ -49,17 +49,15 @@
         <tbody>
           <tr v-for="item in noticeList" key="item.id" class="p-12">
             <td>{{ item.postId }}</td>
-            <td><router-link to="/read_page">{{ item.name }}</router-link></td>
+            <td><router-link to="/read">{{ item.name }}</router-link></td>
             <td>{{ item.id }}</td>
             <td>2023-05-19</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <router-link tag="button" to="/write_page" class="write_btn">
-      <slot>
-        글쓰기
-      </slot>
+    <router-link to="/write_page" class="write_btn">
+      <button class="-m-2.5 rounded-md p-2.5 text-gray-700">글쓰기</button>
     </router-link>
   </div>
 </template>
