@@ -15,7 +15,7 @@ export default{
         <router-link to="/notice" class="text-m font-semibold leading-6 text-gray-900">공지사항</router-link>
         <router-link to="/introPage" class="text-m font-semibold leading-6 text-gray-900">자유게시판</router-link>
         <router-link to="/introPage" class="text-m font-semibold leading-6 text-gray-900">문의게시판</router-link>
-        <router-link to="/introPage" class="text-m font-semibold leading-6 text-gray-900">신청</router-link>
+        <router-link to="/apply" class="text-m font-semibold leading-6 text-gray-900">신청</router-link>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end bottom-0">
         <a href="#" class="text-m font-semibold leading-6 text-gray-900">Log in</a>
