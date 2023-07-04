@@ -4,6 +4,7 @@ import Home from '../view/Home.vue'
 import IntroPage from '../view/IntroPage.vue'
 import NoticeBoard from '../view/NoticeBoard.vue'
 import ReadPage from '../view/ReadPage.vue'
+import ApplyPage from '../view/ApplyPage.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -24,6 +25,12 @@ export default createRouter({
         {
             path: '/read',
             component: ReadPage
+        },
+        {
+            path:'/apply',
+            component:ApplyPage
         }
+
+
     ]
 })
