@@ -5,6 +5,7 @@ import IntroPage from '../view/IntroPage.vue'
 import NoticeBoard from '../view/NoticeBoard.vue'
 import ReadPage from '../view/ReadPage.vue'
 import ApplyPage from '../view/ApplyPage.vue'
+import SignUpPage from '../view/SignUpPage.vue'
 import WritePage from '../view/WritePage.vue'
 
 export default createRouter({
@@ -29,11 +30,7 @@ export default createRouter({
         },
         {
             path:'/apply',
-            component: ApplyPage
-        },
-        {
-            path:'/write',
-            component: WritePage
+            component:ApplyPage
         }
 
 
