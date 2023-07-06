@@ -5,7 +5,7 @@ import IntroPage from '../view/IntroPage.vue'
 import NoticeBoard from '../view/NoticeBoard.vue'
 import ReadPage from '../view/ReadPage.vue'
 import ApplyPage from '../view/ApplyPage.vue'
-import SignUpPage from '../view/SignUpPage.vue'
+import RegisterPage from '../view/RegisterPage.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -32,8 +32,8 @@ export default createRouter({
             component:ApplyPage
         },
         {
-            path:'/signup',
-            component:SignUpPage
+            path:'/register',
+            component:RegisterPage
         }
 
 
