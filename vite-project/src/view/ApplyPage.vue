@@ -1,6 +1,5 @@
 <script>
-    import axios from 'axios';
-    
+   
     const HOST = "https://jsonplaceholder.typicode.com/posts/1/comments";
 
 
