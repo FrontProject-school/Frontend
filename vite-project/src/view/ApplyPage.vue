@@ -1,37 +1,60 @@
 <script>
+   
     const HOST = "https://jsonplaceholder.typicode.com/posts/1/comments";
 
 
-    console.log("apply")
+ 
 export default {
-    mounted(){
-        console.log("apply");
-        this.getData();
-    },
-    data() {
-        return{
+    
+    data(){
+        return {
             applyList: [],
         };
     },
-
-    methods: {
-        getData() {
-            this.$axios
-            .get(HOST)
-            .then((res) => {
-                console.log(res);
-                this.applyList = res.data;
-                console.log(this.applyList);
-            })
-            .catch((error) =>{
-                console.log("Error occurred:");
-                console.log(error);
-            })
-            .finally(() =>{
-                console.log("Finally block");
-            });
-        },
+    mounted(){
+        this.generateDate();
     },
+    methods: {
+        generateDate() {
+            const newData = [
+                {
+                    id:1,
+                    title:'제 2회 한일공동고등교육',
+                    startDate:'2023-07-14',
+                    endDate: '2023-08-14',
+                },
+                {
+                    id:2,
+                    title:'영진 버디프로그램',
+                    startDate:'2023-05-08',
+                    endDate: '2023-06-02',
+                },
+
+                {
+                    id:3,
+                    title:'글로벌 존(zone)',
+                    startDate:'2023-05-08',
+                    endDate: '2023-06-02',
+                },
+                {
+                    id:4,
+                    title:'외국어 프레젠테이션 대회',
+                    startDate:'2023-05-08',
+                    endDate: '2023-06-02',
+                },
+                {
+                    id:5,
+                    title:'글로벌 센터',
+                    startDate:'2023-05-08',
+                    endDate: '2023-06-02',
+                }
+
+            
+            ];
+            this.applyList = newData;
+        }
+    }
+    
    
 
 
