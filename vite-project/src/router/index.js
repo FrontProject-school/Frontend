@@ -31,6 +31,10 @@ export default createRouter({
         {
             path:'/apply',
             component:ApplyPage
+        },
+        {
+            path: '/write',
+            component:WritePage
         }
 
 
