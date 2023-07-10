@@ -1,6 +1,6 @@
 <script>
 export default {
-   
+
 
 }
 
@@ -57,33 +57,8 @@ export default {
     </div>
 
    
-        <button type="button" class="my-7 px-8 py-2 border border-solid border-green-500 rounded-5 text-sm font-bold text-green-500 leading-20 tracking-normal float-right mr-40">신청</button>
-        <button type="button" class="my-7 px-8 py-2 border border-solid border-gray-300 rounded-5 text-sm font-bold text-gray-500 leading-20 tracking-normal float-right mr-8">취소</button>
-
-
-
-
-    
-    
-
-
-   
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-   
+    <button  class="my-7 px-8 py-2 border border-solid border-green-500 rounded-5 text-sm font-bold text-green-500 leading-20 tracking-normal float-right mr-40">신청</button>
+    <button  class="my-7 px-8 py-2 border border-solid border-gray-300 rounded-5 text-sm font-bold text-gray-500 leading-20 tracking-normal float-right mr-8">취소</button>
 
 </template>
 
