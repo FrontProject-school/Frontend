@@ -6,6 +6,7 @@ import NoticeBoard from '../view/NoticeBoard.vue'
 import ReadPage from '../view/ReadPage.vue'
 import ApplyPage from '../view/ApplyPage.vue'
 import RegisterPage from '../view/RegisterPage.vue'
+import WritePage from '../view/WritePage.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -34,6 +35,10 @@ export default createRouter({
         {
             path:'/register',
             component:RegisterPage
+        },
+        {
+            path: '/write',
+            component:WritePage
         }
 
 
