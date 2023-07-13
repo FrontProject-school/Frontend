@@ -23,6 +23,7 @@ export default {
       currentSlide: 0,
       slideInterval: null,
       slideDuration: 2000,
+      
     };
   },
   mounted() {
@@ -40,11 +41,16 @@ export default {
     prevSlide() {
       this.currentSlide = (this.currentSlide - 1 + this.banners.length) % this.banners.length;
     },
+
+
+
   },
-  beforeDestroy() {
-    clearInterval(this.slideInterval);
-  },
+  
+  
 };
+
+
+
 </script>
 <template>
 <div class="carousel">
@@ -58,6 +64,45 @@ export default {
     <img :src="banner.imageUrl" :alt="banner.altText" />
     </div>
 </div>
+
+<div class="slide-show p-80 pt-20 pb-60 pl-65 relative">
+  <div class="slide-show2 mb-30">
+    <h2 class="text-3xl font-bold inline-block ml-96 relative">
+      공 지 사 항
+      <span class="absolute bg-teal-500 w-10 h-10 rounded-full z-[-1] -top-1/2 -right-5 transform translate-y-1/8"></span>
+    </h2>
+  </div>
+</div>
+
+<div class="relative top-[-200px]" >
+  <ol class="flex">
+    <li class="mr-1 mb-2 bg-white border border-gray-300 p-20 border-b-2 ">
+      <router-link to="/read" class="block border-b-2 border-green-500">id labore ex et quam laborum</router-link>
+    </li>
+
+    <li class="mr-1 mb-2 bg-white border border-gray-300 p-20 border-b-2  ">
+      <router-link to="/read" class="block border-b-2 border-green-500">id labore ex et quam laborum</router-link>
+    </li>
+
+    <li class="mr-1 mb-2 bg-white border border-gray-300 p-20 border-b-2 ">
+      <router-link to="/read" class="block border-b-2 border-green-500">id labore ex et quam laborum</router-link>
+    </li>
+
+    <li class="mr-1 mb-2 bg-white border border-gray-300 p-20 border-b-2 ">
+      <router-link to="/read" class="block border-b-2 border-green-500">id labore ex et quam laborum</router-link>
+    </li>
+  </ol>
+</div>
+
+
+
+
+
+
+
+
+
+
 </template>
 <style>
 .carousel {
