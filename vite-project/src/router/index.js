@@ -7,6 +7,9 @@ import ReadPage from '../view/ReadPage.vue'
 import ApplyPage from '../view/ApplyPage.vue'
 import RegisterPage from '../view/RegisterPage.vue'
 import WritePage from '../view/WritePage.vue'
+import LoginModalPage from '../view/LoginModalPage.vue'
+
+
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -39,7 +42,12 @@ export default createRouter({
         {
             path: '/write',
             component:WritePage
+        },
+        {
+            path:'/modal' ,
+            component:LoginModalPage
         }
+       
 
 
     ]
