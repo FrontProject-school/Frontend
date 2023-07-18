@@ -18,8 +18,9 @@ export default{
         <router-link to="/apply" class="text-m font-semibold leading-6 text-gray-900">신청</router-link>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end bottom-0">
-        <a href="#" class="text-m font-semibold leading-6 text-gray-900">Log in</a>
+        <router-link to="/modal" class="text-m font-semibold leading-6 text-gray-900">Log in</router-link>
       </div>
+      
     </nav>
   </header>
 </template>
