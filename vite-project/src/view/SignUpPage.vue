@@ -1,6 +1,5 @@
 
-
-   <template>
+ <template>
     <div>
       <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="bg-white w-1/2 p-6 rounded shadow-lg">
@@ -67,4 +66,7 @@
     }
   };
   </script>
-  
+   
+
+    
+    
