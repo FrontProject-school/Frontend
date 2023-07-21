@@ -1,11 +1,10 @@
 
    <template>
-    <div>
+    <div class="bg-cover bg-no-repeat bg-center h-screen  brightness-50" style="background-image: url('https://www.yju.ac.kr/sites/kr/atchmnfl_mngr/imageSlide/141/temp_1651124562424100.jpg');background-size: 100% 100%;"></div>
       <div v-if="showModal || showLogin" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="bg-white w-1/2 p-6 rounded shadow-lg">
           <h2 class="text-3xl mb-4">Login</h2>
-  
-          <form @submit.prevent="submitForm">
+            <form @submit.prevent="submitForm">
             <div class="mb-6">
               <label for="username" class="block mb-2 text-gray-700">Username</label>
               <input type="text" id="username" v-model="username" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="사용자 이름을 입력하세요">
@@ -21,8 +20,8 @@
   
             <a href="#" class="text-green-600 hover:underline" @click="redirectToHome">비밀번호를 잊으셨나요?</a>
   
-            <div class="flex justify-end">
-              <router-link to="/signup" class="text-gray-400 hover:underline">Sign Up</router-link>
+            <div class="flex justify-end -mt-8">
+              <router-link to="/signup" class="text-gray-400 hover:underline  ">Sign Up</router-link>
             </div>
           </form>
         </div>
@@ -36,7 +35,7 @@
           <button @click="closeModalErrorMessage" class="bg-green-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mt-4">확인</button>
         </div>
       </div>
-    </div>
+    
   </template>
   
   <script>
