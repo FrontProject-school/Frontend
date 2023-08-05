@@ -1,6 +1,6 @@
 <script>
 export default{
-  
+
 }
 </script>
 
@@ -19,8 +19,9 @@ export default{
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end bottom-0">
         <router-link to="/modal" class="text-m font-semibold leading-6 text-gray-900">Log in</router-link>
+        <router-link to="/memberinfo" class="text-m font-semibold leading-6 text-gray-900">마이페이지 테스트</router-link>
       </div>
-      
+
     </nav>
   </header>
 </template>
