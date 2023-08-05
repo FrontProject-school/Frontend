@@ -17,6 +17,7 @@
     "vue": "^3.2.47",
     "vue-awesome-swiper": "^5.0.1",
     "vue-carousel": "^0.18.0",
+    "vue-google-signin-button": "^1.0.4",
     "vue-owl-carousel": "^2.0.3",
     "vue-router": "^4.2.2",
     "vue-slick-carousel": "^1.0.6"
