@@ -47,7 +47,7 @@ div .border-double {
 
 <script>
 import axios from 'axios'
-import mypage from '../components/MyPageSide.vue';
+import mypage from '../../components/MyPageSide.vue';
 
 export default {
   components: {

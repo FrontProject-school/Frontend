@@ -89,7 +89,7 @@
           <button class=" rounded-md p-2 text-gray-700 float-right border">글쓰기</button>
         </router-link>
       </div>
-
+      
       <!-- 검색 창 -->
       <div class="col-end-6 col-span-1">
         <div class="border-2 h-1/2 ml-5">
@@ -102,7 +102,7 @@
                   <input type="text" class=" p-1 outline-0" @input="this.handlePostSearch" placeholder="검색어를 입력해주세요.">
                 </div>
               </section>
-            </div>
+            </div> 
           </div>
         </div>
       </div>
