@@ -5,13 +5,13 @@ export default {
 </script>
 
 <template>
-  <div class="container w-3/5 mx-auto">
+  <div class="container mx-auto">
     <!-- TITLE -->
-    <div>
-      <input type="text" placeholder="Title" class="container text-2xl">
-      <div class="container mt-2">writer</div>
+    <div class="my-3">
+      <input type="text" placeholder="Title" class="container text-2xl underline underline-offset-8">
+      <hr>
+      <div class="container mt-5 font-semibold">writer</div>
     </div>
-    <hr>
     <!-- CONTENT -->
     <div>
       <textarea placeholder="내용을 입력하세요" class="container mt-5" style="min-height: 500px;"></textarea>
