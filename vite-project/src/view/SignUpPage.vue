@@ -1,7 +1,7 @@
 
-
-   <template>
+ <template>
     <div>
+    <div class="bg-cover bg-no-repeat bg-center h-screen brightness-50" style="background-image: url('https://www.yju.ac.kr/sites/kr/atchmnfl_mngr/imageSlide/141/temp_1651124562424100.jpg');background-size: 100% 100%;"></div>
       <div v-if="showModal" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="bg-white w-1/2 p-6 rounded shadow-lg">
           <h2 class="text-3xl mb-4">Sign Up</h2>
@@ -22,7 +22,16 @@
             <button type="submit" class="bg-green-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
               Sign Up
             </button>
+            
+            
             <button @click="closeModal" class="text-gray-400 hover:underline">Cancel</button>
+           
+            <router-link to="/modal" class="flex justify-between -mt-10">
+              <button type="submit" class="bg-green-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg ml-auto ">
+                Back
+              </button>
+            </router-link>
+          
           </form>
         </div>
       </div>
@@ -67,4 +76,7 @@
     }
   };
   </script>
-  
+   
+
+    
+    

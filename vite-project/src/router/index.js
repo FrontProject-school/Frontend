@@ -10,58 +10,59 @@ import WritePage from '../view/WritePage.vue'
 import LoginModalPage from '../view/LoginModalPage.vue'
 import SignUpPage from '../view/SignUpPage.vue'
 
+// 마이페이지
+import MyPageSide from '../components/MyPageSide.vue'
+import MemberInfo from '../view/MemberInfo.vue'
+import WrittenList from '../view/WrittenList.vue'
+import ApplyingNow from '../view/ApplyingNow.vue'
+import ResignVue from '../view/ResignVue.vue'
 
-const routes = [
-  {
-      path: '/',
-      component: Home
-  },
-  {
-      path: '/intro',
-      component: IntroPage
-  },
-  {
-      path: '/board/notice',  // 공지 게시판
-      component: BoardPage
-  },
-  {
-      path: '/board/Inquiry', // 문의 게시판
-      component: BoardPage
-  },
-  {
-      path: '/board/bulletin',    // 자유 게시판
-      component: BoardPage
-  },
-  {
-      path: '/read',
-      component: ReadPage
-  },
-  {
-      path:'/apply',
-      component:ApplyPage
-  },
-  {
-      path:'/register',
-      component:RegisterPage
-  },
-  {
-      path: '/write',
-      component:WritePage
-  },
-  {
-      path:'/modal' ,
-      component:LoginModalPage
-  },
-  {
-      path :'/signup',
-      component: SignUpPage
-  }
-]
 
-const router = createRouter({
-  mode: 'history',
-  history: createWebHistory(),
-  routes
+export default createRouter({
+    history: createWebHashHistory(),
+
+    routes: [
+        {
+            path: '/',
+            component: Home
+        },
+        {
+            path: '/intro',
+            component: IntroPage
+        },
+        {
+            path: '/notice',
+            component: NoticeBoard
+        },
+        {
+            path: '/read',
+            component: ReadPage
+        },
+        {
+            path:'/apply',
+            component:ApplyPage
+        },
+        {
+            path:'/register',
+            component:RegisterPage
+        },
+        {
+            path: '/write',
+            component:WritePage
+        },
+        {
+            path:'/modal' ,
+            component:LoginModalPage
+        },
+        {
+            path :'/signup',
+            component: SignUpPage
+
+        },
+        // 마이페이지
+        { path :'/memberinfo', component: MemberInfo },
+        { path :'/writtenList', component: WrittenList },
+        { path :'/applyingNow', component: ApplyingNow },
+        { path :'/resign', component: ResignVue },
+    ]
 })
-
-export default router
