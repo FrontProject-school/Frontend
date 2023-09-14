@@ -55,7 +55,7 @@
 
 
 <script>
-import mypage from '../components/MyPageSide.vue';
+import mypage from '../../components/MyPageSide.vue';
 
 export default {
   components: {

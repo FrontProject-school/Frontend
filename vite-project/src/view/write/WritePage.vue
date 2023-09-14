@@ -10,9 +10,10 @@ export default {
 
   <div class="container w-3/5 mx-auto">
     <!-- TITLE -->
-    <div>
-      <input type="text" placeholder="Title" class="container text-2xl">
-      <div class="container mt-2">writer</div>
+    <div class="my-3">
+      <input type="text" placeholder="Title" class="container text-2xl underline underline-offset-8">
+      <hr>
+      <div class="container mt-5 font-semibold">writer</div>
     </div>
     <hr>
 
