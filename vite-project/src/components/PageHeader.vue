@@ -5,8 +5,8 @@ export default{
 </script>
 
 <template>
-  <header class="inset-x-0">
-    <nav class="flex items-center justify-between py-4 px-6 lg:px-8" aria-label="Global">
+  <header class="container m-auto inset-x-0">
+    <nav class="flex items-center justify-between py-4 px-3" aria-label="Global">
       <router-link to="/">
         <img src="../assets/영진전문대 마크.png" alt="logo" style="width: 70px; height: 70px;" class="me-6">
       </router-link>
