@@ -1,8 +1,4 @@
-<script>
-  let url = window.location.pathname
-
-  // 게시판 경로에 따른 api 경로
-  // const HOST = `http://localhost:5174${url}`;
+<!-- <script>
   const HOST = "https://jsonplaceholder.typicode.com/posts/1/comments";
 
   export default {
@@ -47,6 +43,57 @@
       
     },
   };
+</script> -->
+<script>
+  export default {
+    name: 'board_page',
+    data () {
+      return {
+        pageNum: 0
+      }
+    },
+    props: {
+      listArray: {
+        type: Array,  // BoardArray 에서 받아오는 list
+        required: true
+      },
+      pageSize: {
+        type: Number, 
+        required: false,
+        default: 10 // 넘오는 페이지 수의 기본 값
+      }
+    },
+    methods: {
+      prevPage() {
+        this.pageNum -= 1;
+      },
+      nextPage() {
+        this.pageNum += 1;
+      }
+    },  
+    computed: {
+      pageCount () {
+        let listLength = this.listArray.length,
+            listSize = this.pageSize,
+            page = Math.floor(listLength / listSize);
+
+        listLength % listSize > 0 ? page+=1 : page;
+
+        return page;
+      },
+      paginatedData () {
+        const start = this.pageNum * this.pageSize,
+            end = start + this.pageSize;
+        if(this.listArray){
+          return this.listArray.slice(start, end);
+        } else {
+          return [];
+        }
+      }
+    }
+
+
+  }
 </script>
 
 <template>
@@ -74,36 +121,25 @@
       <!-- 테이블 박스 -->
       <div class="col-start-1 col-span-4">
         <!-- 게시판 -->
-        <table class="container table-auto text-gray-900 text-center m-auto">
+        <table class="container text-gray-900 text-center">
           <thead class="border-b-2">
             <tr>
-              <th class="py-3 px-4">NO.</th>
-              <th>제목</th>
+              <th class="py-3 px-3">NO.</th>
+              <th style="width: 900px;">제목</th>
               <th>작성자</th>
               <th>작성일</th>
             </tr>
           </thead>
           <tbody>
             <!-- 게시글 -->
-            <tr v-for="item in noticeList" key="item.id" class="border-b bg-slate-10">
-              <td>{{ item.postId }}</td>
-              <td class="py-4 px-4">
+            <tr v-for="p in paginatedData" :key="p.no" class="border-b bg-slate-10">
+              <td>{{ p.userId }}</td>
+              <td class="py-4">
                 <router-link to="/read" >
-                  <span>{{ item.name }}</span>
+                  <span>{{ p.title }}</span>
                 </router-link>
               </td>
-              <td>{{ item.id }}</td>
-              <td>2023-05-19</td>
-            </tr>
-            <!-- 더미 -->
-            <tr v-for="item in noticeList" key="item.id" class="border-b bg-slate-10">
-              <td>{{ item.postId }}</td>
-              <td class="py-4 px-4">
-                <router-link to="/read" >
-                  <span>{{ item.name }}</span>
-                </router-link>
-              </td>
-              <td>{{ item.id }}</td>
+              <td>{{ p.id }}</td>
               <td>2023-05-19</td>
             </tr>
           </tbody>
@@ -113,10 +149,12 @@
     
     <!-- 페이징 & 글쓰기 버튼 -->
     <div class="flex items-center justify-between">
-      <div class="m-auto text-center">
-        <div class="ml-9">
-          1, 2, 3
+      <div class="m-auto text-center flex ">
+        <button :disabled="pageNum === 0" @click="prevPage" class="mx-3">pre</button>
+        <div>
+          <h3>{{ pageNum + 1}} / {{ pageCount }}</h3>
         </div>
+        <button :disabled="pageNum >= pageCount - 1" @click="nextPage" class="mx-3">next</button>
       </div>
       <div class="">
         <router-link to="/write" class="write_btn">
@@ -127,7 +165,3 @@
 
   </div>
 </template>
-
-<style>
-
-</style>

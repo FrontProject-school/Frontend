@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 import Home from '../view/Home.vue'
 import IntroPage from '../view/IntroPage.vue'
-import BoardPage from '../view/board/BoardPage.vue'
+import BoardArray from '../view/board/BoardArray.vue'
 import ReadPage from '../view/read/ReadPage.vue'
 import ApplyPage from '../view/apply/ApplyPage.vue'
 import RegisterPage from '../view/RegisterPage.vue'
@@ -11,7 +11,6 @@ import LoginModalPage from '../view/sign/LoginModalPage.vue'
 import SignUpPage from '../view/sign/SignUpPage.vue'
 
 // 마이페이지
-import MyPageSide from '../components/MyPageSide.vue'
 import MemberInfo from '../view/user_page/MemberInfo.vue'
 import WrittenList from '../view/WrittenList.vue'
 import ApplyingNow from '../view/apply/ApplyingNow.vue'
@@ -32,7 +31,7 @@ export default createRouter({
         },
         {
             path: '/notice',
-            component: BoardPage
+            component: BoardArray
         },
         {
             path: '/read',
@@ -60,7 +59,7 @@ export default createRouter({
 
         },
         // 마이페이지
-        { path :'/memberinfo', component: MemberInfo },
+        { path :'/memberInfo', component: MemberInfo },
         { path :'/writtenList', component: WrittenList },
         { path :'/applyingNow', component: ApplyingNow },
         { path :'/resign', component: ResignVue },

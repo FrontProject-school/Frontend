@@ -6,7 +6,7 @@
     <h1>마이 페이지</h1>
     <ul class="menu">
       <li>
-        <router-link to="/memberinfo">회원 정보</router-link>
+        <router-link to="/memberInfo">회원 정보</router-link>
       </li>
       <li>
         <router-link to="writtenList">쓴 글 목록</router-link>
