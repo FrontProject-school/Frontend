@@ -1,8 +1,11 @@
 <script>
 import BoardPage from './BoardPage.vue';
+import SearchArray from './SearchArray.vue';
+
 // import axios from 'axios';
 
-// let url = window.location.pathname
+let url = window.location.pathname;
+console.log(url);
 // 게시판 경로에 따른 api 경로
 // const HOST = `http://localhost:5174${url}`;
 
@@ -10,7 +13,7 @@ const HOST = "https://jsonplaceholder.typicode.com/posts";
 export default {
 
   name:'pagination',
-  components: { BoardPage },
+  components: { BoardPage, SearchArray },
   data() {
     return {
       pageArray: [],
@@ -31,8 +34,14 @@ export default {
 </script>
 
 <template>
-  <div>
-    <BoardPage :list-array="pageArray"/>
+  <div class="container m-auto">
+    <!-- 검색 창 -->
+    <div>
+      <SearchArray /> 
+    </div>
+    <div>
+      <BoardPage :list-array="pageArray"/>
+    </div>
   </div>
 </template>
 
