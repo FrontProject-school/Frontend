@@ -63,7 +63,7 @@ button {
 
   console.log("notice");
 
-  import MyPageSide from '../components/MyPageSide.vue';
+  import MyPageSide from '../../components/MyPageSide.vue';
 
   export default {
     components: {

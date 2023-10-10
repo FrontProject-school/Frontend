@@ -12,10 +12,11 @@ export default {
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container w-3/5 mx-auto">
     <div class="lg">
       <div class="my-3">
-        <h1 class="text-2xl underline underline-offset-8">제목</h1>
+        <h1 class="text-2xl">제목</h1>
+        <hr>
         <div class="flex justify-between mt-5 ">
           <div class="font-semibold">작성자 : 글쓴이</div>
           <!-- vue - dropdown -->
@@ -45,6 +46,7 @@ export default {
             </transition>
           </Menu>
         </div>
+        <hr>
       </div>
       
       <!-- CONTENT -->
@@ -59,7 +61,9 @@ export default {
         <div class="border-t border-black my-2"></div>
   
         <!-- Read COMMENT -->
-        <div></div>
+        <div style="min-height: 50px;">
+
+        </div>
   
         <!-- Write COMMENT -->
         <input type="text" placeholder="작성할 내용을 입력해주세요." class="">
