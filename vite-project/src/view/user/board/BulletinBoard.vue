@@ -1,6 +1,6 @@
 <script>
 import BoardPage from './BoardPage.vue';
-import SearchArray from './SearchArray.vue';
+import SearchArray from './SearchWord.vue';
 
 // import axios from 'axios';
 
@@ -11,7 +11,7 @@ console.log(url);
 
 const HOST = "https://jsonplaceholder.typicode.com/posts";
 export default {
-
+  
   name:'pagination',
   components: { BoardPage, SearchArray },
   data() {
