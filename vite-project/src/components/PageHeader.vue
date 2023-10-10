@@ -2,7 +2,8 @@
 export default{
   data() {
     return {
-      isAdmin: false
+      isAdmin: false,
+      isLogin: false
     }
   }
 }
@@ -31,8 +32,8 @@ export default{
             <router-link to="/apply" class="text-m font-semibold leading-6 text-gray-900" @click="() => {isAdmin = true}">관리자 페이지</router-link>
           </div>
           <div class="hidden lg:flex lg:flex-1 lg:justify-end bottom-0">
-            <router-link to="/modal" class="text-m font-semibold leading-6 text-gray-900">Log in</router-link>
-            <router-link to="/memberInfo" class="text-m font-semibold leading-6 text-gray-900">마이페이지</router-link>
+            <router-link to="/modal"  v-if="!isLogin" class="text-m font-semibold leading-6 text-gray-900">Log in</router-link>
+            <router-link to="/memberInfo" v-else class="text-m font-semibold leading-6 text-gray-900">마이페이지</router-link>
           </div>
         </div>
     
