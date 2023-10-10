@@ -1,6 +1,5 @@
 <template>
 
-
   <!-- SIDE MENU -->
   <section class="side-menu">
     <h1>마이 페이지</h1>
@@ -14,12 +13,8 @@
       <li>
         <router-link to="applyingNow">신청 현황</router-link>
       </li>
-      <li>
-        <router-link to="resign">회원 탈퇴</router-link>
-      </li>
     </ul>
   </section>
-
 
 </template>
 

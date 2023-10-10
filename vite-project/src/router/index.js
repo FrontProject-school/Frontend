@@ -19,7 +19,6 @@ import AdminHome from '../view/admin/AdminHome.vue'
 import MemberInfo from '../view/user/user_page/MemberInfo.vue'
 import WrittenList from '../view/user/WrittenList.vue'
 import ApplyingNow from '../view/user/apply/ApplyingNow.vue'
-import ResignVue from '../view/user/user_page/ResignVue.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -45,6 +44,5 @@ export default createRouter({
         { path :'/memberInfo', component: MemberInfo },
         { path :'/writtenList', component: WrittenList },
         { path :'/applyingNow', component: ApplyingNow },
-        { path :'/resign', component: ResignVue },
     ]
 })
