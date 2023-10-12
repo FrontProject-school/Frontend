@@ -1,4 +1,6 @@
 <script>
+import { stringifyQuery } from 'vue-router';
+
 export default {
     name: 'board_page',
     data() {
@@ -15,6 +17,10 @@ export default {
             type: Number,
             required: false,
             default: 10 // 넘오는 페이지 수의 기본 값
+        },
+        checked: {
+            type: Boolean,
+            required: false,
         }
     },
     methods: {
@@ -61,13 +67,15 @@ export default {
           <tbody>
             <!-- 게시글 -->
             <tr v-for="p in paginatedData" :key="p.no" class="border-b bg-slate-10">
-              <td>{{ p.userId }}</td>
+              
+              <td>{{ p.id }}</td>
               <td class="py-4">
                 <router-link to="/read" >
-                  <span>{{ p.title }}</span>
+                  <span v-if="checked">------------------------------------------</span>
+                  <span v-else>{{ p.title }}</span>
                 </router-link>
               </td>
-              <td>{{ p.id }}</td>
+              <td>{{ p.userId }}</td>
               <td>2023-05-19</td>
             </tr>
           </tbody>

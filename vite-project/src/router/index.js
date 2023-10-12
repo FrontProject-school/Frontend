@@ -3,7 +3,9 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // User
 import UserHome from '../view/user/UserHome.vue'
 import IntroPage from '../view/user/IntroPage.vue'
-import BoardArray from '../view/user/board/BoardArray.vue'
+import BulletinBoard from '../view/user/board/BulletinBoard.vue'
+import NoticeBoard from '../view/user/board/NoticeBoard.vue'
+import RequireBoard from '../view/user/board/RequireBoard.vue'
 import ReadPage from '../view/user/read/ReadPage.vue'
 import ApplyPage from '../view/user/apply/ApplyPage.vue'
 import RegisterPage from '../view/user/RegisterPage.vue'
@@ -19,7 +21,6 @@ import AdminHome from '../view/admin/AdminHome.vue'
 import MemberInfo from '../view/user/user_page/MemberInfo.vue'
 import WrittenList from '../view/user/WrittenList.vue'
 import ApplyingNow from '../view/user/apply/ApplyingNow.vue'
-import ResignVue from '../view/user/user_page/ResignVue.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -31,9 +32,9 @@ export default createRouter({
         // UserPage
         {   path: '/', component: UserHome },
         {   path: '/intro', component: IntroPage },
-        {   path: '/board/notice', component: BoardArray },
-        {   path: '/board/bulletin', component: BoardArray },
-        {   path: '/board/inquiry', component: BoardArray },
+        {   path: '/board/notice', component: NoticeBoard },
+        {   path: '/board/bulletin', component: BulletinBoard },
+        {   path: '/board/require', component: RequireBoard },
         {   path: '/read', component: ReadPage },
         {   path:'/apply', component:ApplyPage },
         {   path:'/register', component:RegisterPage },
@@ -45,6 +46,5 @@ export default createRouter({
         { path :'/memberInfo', component: MemberInfo },
         { path :'/writtenList', component: WrittenList },
         { path :'/applyingNow', component: ApplyingNow },
-        { path :'/resign', component: ResignVue },
     ]
 })
