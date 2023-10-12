@@ -2,15 +2,14 @@
   import BoardPage from './BoardPage.vue';  
   import SearchWord from './SearchWord.vue';
   import { getNoticeBoard } from '../../../api/Board';
-  import { useRouter } from 'vue-router';
-
 
   export default {
-    name:'notice_board',
+    name:'require_board',
     components: { SearchWord, BoardPage },
     data() {
     return {
       pageArray: [],
+      check: true,      
     }
     },
     created () {
@@ -28,7 +27,7 @@
       <SearchWord />
     </div>
     <div class="container m-auto">
-      <BoardPage :list-array="pageArray"/>
+      <BoardPage :list-array="pageArray" :checked="check"/>
     </div>
   </div>
 </template>

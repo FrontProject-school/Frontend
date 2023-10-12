@@ -1,50 +1,32 @@
 <script>
-import BoardPage from './BoardPage.vue';
-import SearchArray from './SearchWord.vue';
+  import BoardPage from './BoardPage.vue';  
+  import SearchWord from './SearchWord.vue';
+  import { getNoticeBoard } from '../../../api/Board';
 
-// import axios from 'axios';
-
-let url = window.location.pathname;
-console.log(url);
-// 게시판 경로에 따른 api 경로
-// const HOST = `http://localhost:5174${url}`;
-
-const HOST = "https://jsonplaceholder.typicode.com/posts";
-export default {
-  
-  name:'pagination',
-  components: { BoardPage, SearchArray },
-  data() {
+  export default {
+    name:'bulletin_board',
+    components: { SearchWord, BoardPage },
+    data() {
     return {
       pageArray: [],
     }
-  },
-  created () {
-    this.$axios
-    .get(HOST)
-    .then(response => {
-      console.log(response);
-      this.pageArray = response.data;
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    },
+    created () {
+      getNoticeBoard()
+        .then((res) => {
+          this.pageArray = res;
+        })
+    }
   }
-}
 </script>
 
 <template>
   <div class="container m-auto">
-    <!-- 검색 창 -->
     <div>
-      <SearchArray /> 
+      <SearchWord />
     </div>
-    <div>
+    <div class="container m-auto">
       <BoardPage :list-array="pageArray"/>
     </div>
   </div>
 </template>
-
-<style>
-
-</style>

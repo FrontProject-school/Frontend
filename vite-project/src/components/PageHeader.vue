@@ -27,7 +27,7 @@ export default{
             <router-link to="/intro" class="text-m font-semibold leading-6 text-gray-900">소개</router-link>
             <router-link to="/board/notice" class="text-m font-semibold leading-6 text-gray-900">공지사항</router-link>
             <router-link to="/board/bulletin" class="text-m font-semibold leading-6 text-gray-900">자유게시판</router-link>
-            <router-link to="/board/inquiry" class="text-m font-semibold leading-6 text-gray-900">문의게시판</router-link>
+            <router-link to="/board/require" class="text-m font-semibold leading-6 text-gray-900">문의게시판</router-link>
             <router-link to="/apply" class="text-m font-semibold leading-6 text-gray-900">신청</router-link>
             <router-link to="/apply" class="text-m font-semibold leading-6 text-gray-900" @click="() => {isAdmin = true}">관리자 페이지</router-link>
           </div>
