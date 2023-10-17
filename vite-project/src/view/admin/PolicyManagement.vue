@@ -2,14 +2,14 @@
 <template>
     <div class="list flex justify-center">
       <p class="tit text-black text-2xl font-semibold my-4 shadow-lg">
-         신청 진행 현황
+        정책 관리
       </p>
     </div>
 
   
     <div v-for="item in applyList" :key="item.id">
       <router-link
-        to="/register"
+        to="/write"
         class="group block max-w-sm mx-auto rounded-lg p-6 bg-white ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500 my-8"
       >
         <div class="flex items-center space-x-3">
@@ -25,10 +25,10 @@
           </h3>
         </div>
         <p class="text-slate-500 group-hover:text-white text-sm">
-          진행기간: {{ item.startDate }} ~ {{ item.endDate }}
+          
         </p>
         <p class="text-slate-500 group-hover:text-white text-xs">
-          * 누르면 신청 페이지로 이동
+         
         </p>
       </router-link>
     </div>
