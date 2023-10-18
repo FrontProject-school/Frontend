@@ -11,7 +11,7 @@
         <router-link to="writtenList">쓴 글 목록</router-link>
       </li>
       <li>
-        <router-link to="applyingNow">신청 현황</router-link>
+        <router-link to="applymy">신청 현황</router-link>
       </li>
     </ul>
   </section>

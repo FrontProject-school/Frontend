@@ -13,14 +13,17 @@ import WritePage from '../view/user/write/WritePage.vue'
 import LoginModalPage from '../view/user/sign/LoginModalPage.vue'
 import SignUpPage from '../view/user/sign/SignUpPage.vue'
 
+
 // Admin
 import AdminHome from '../view/admin/AdminHome.vue'
+import PolicyManagement from'../view/admin/PolicyManagement.vue'
 
 
 // 마이페이지
 import MemberInfo from '../view/user/user_page/MemberInfo.vue'
 import WrittenList from '../view/user/WrittenList.vue'
-import ApplyingNow from '../view/user/apply/ApplyingNow.vue'
+import ApplyMyPage from '../view/user/apply/ApplyMyPage.vue'
+
 
 export default createRouter({
     history: createWebHashHistory(),
@@ -28,6 +31,7 @@ export default createRouter({
     routes: [
         // AdminPage
         {   path: '/admin', component: AdminHome },
+        {   path: '/policy', component: PolicyManagement },
 
         // UserPage
         {   path: '/', component: UserHome },
@@ -45,6 +49,8 @@ export default createRouter({
         // MyPage
         { path :'/memberInfo', component: MemberInfo },
         { path :'/writtenList', component: WrittenList },
-        { path :'/applyingNow', component: ApplyingNow },
+        { path:'/applymy', component:ApplyMyPage }
+        
+        
     ]
 })

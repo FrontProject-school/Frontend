@@ -2,7 +2,7 @@
 <template>
     <div class="list flex justify-center">
       <p class="tit text-black text-2xl font-semibold my-4 shadow-lg">
-         신청 진행 현황
+         신청 현황
       </p>
     </div>
 

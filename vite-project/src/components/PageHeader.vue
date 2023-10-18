@@ -19,7 +19,7 @@ export default{
           <router-link to="/admin" class="text-m font-semibold leading-6 text-gray-900">관리자 관리</router-link>
           <router-link to="/board/bulletin" class="text-m font-semibold leading-6 text-gray-900">문의 관리</router-link>
           <router-link to="/board/inquiry" class="text-m font-semibold leading-6 text-gray-900">신청 관리</router-link>
-          <router-link to="/apply" class="text-m font-semibold leading-6 text-gray-900">정책 관리</router-link>
+          <router-link to="/policy" class="text-m font-semibold leading-6 text-gray-900">정책 관리</router-link>
           <router-link to="/" class="text-m font-semibold leading-6 text-gray-900" @click="() => {isAdmin = false}">사용자 페이지</router-link>
         </div>
         <div v-else class="container flex items-center justify-between py-4 px-3">
