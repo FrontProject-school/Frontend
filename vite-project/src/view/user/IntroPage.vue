@@ -7,7 +7,7 @@ export default {
 <template>
  
  <div class="relative flex items-center inline-block text-[#3b4c68] pl-7 text-2xl font-semibold mb-10 ml-40">
-  <img src="../assets/체크박스.png" alt="체크박스" class="mr-2"> 국제교류원
+  <img src="/체크박스.png" alt="체크박스" class="mr-2"> 국제교류원
 </div>
 
  <div class="relative w-4/5 max-h-1/2 text-lg bg-e9f2f4 px-6 py-6 -mt-5 mx-auto my-auto">
@@ -39,21 +39,21 @@ export default {
           <ul class="col_item">
             <li class="bullet001 mb-2" style="margin-left: 10px; padding-left: 13px; font-size: 18px; padding-bottom: 15px; line-height: 1.5;">
               <div class="flex items-center">
-                <img src="../assets/체크박스2.png" alt="체크박스2" class="mr-2">
+                <img src="/체크박스2.png" alt="체크박스2" class="mr-2">
                    <span>해외 자매대학 업무</span>
               </div>
             </li>
            
             <li class="bullet001 mb-2" style="margin-left: 10px; padding-left: 13px; font-size: 18px; padding-bottom: 15px; line-height: 1.5;">
               <div class="flex items-center">
-                <img src="../assets/체크박스2.png" alt="체크박스2" class="mr-2">
+                <img src="/체크박스2.png" alt="체크박스2" class="mr-2">
                    <span>동남아시아 관련 업무</span>
               </div>
             </li>
             
             <li class="bullet001 mb-2" style="margin-left: 10px; padding-left: 13px; font-size: 18px; padding-bottom: 15px; line-height: 1.5;">
               <div class="flex items-center">
-                <img src="../assets/체크박스2.png" alt="체크박스2" class="mr-2">
+                <img src="/체크박스2.png" alt="체크박스2" class="mr-2">
                    <span>해외 교육업무</span>
               </div>
             </li>
@@ -64,21 +64,21 @@ export default {
              
               <li class="bullet001 mb-2" style="margin-left: 10px; padding-left: 13px; font-size: 18px; padding-bottom: 15px; line-height: 1.5;">
                 <div class="flex items-center">
-                  <img src="../assets/체크박스2.png" alt="체크박스2" class="mr-2">
+                  <img src="/체크박스2.png" alt="체크박스2" class="mr-2">
                    <span>교내 글로벌 업무</span>
                 </div>
               </li>
               
               <li class="bullet001 mb-2" style="margin-left: 10px; padding-left: 13px; font-size: 18px; padding-bottom: 15px; line-height: 1.5;">
                <div class="flex items-center">
-                 <img src="../assets/체크박스2.png" alt="체크박스2" class="mr-2">
+                 <img src="/체크박스2.png" alt="체크박스2" class="mr-2">
                    <span>영어권 유학생 관리</span>
                </div>
               </li>
               
               <li class="bullet001 mb-2" style="margin-left: 10px; padding-left: 13px; font-size: 18px; padding-bottom: 15px; line-height: 1.5;">
                 <div class="flex items-center">
-                  <img src="../assets/체크박스2.png" alt="체크박스2" class="mr-2">
+                  <img src="/체크박스2.png" alt="체크박스2" class="mr-2">
                    <span>외국인 교수 관리</span>
                 </div>
               </li>
