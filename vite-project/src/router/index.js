@@ -17,12 +17,16 @@ import SignUpPage from '../view/user/sign/SignUpPage.vue'
 // Admin
 import AdminHome from '../view/admin/AdminHome.vue'
 import PolicyManagement from'../view/admin/PolicyManagement.vue'
+import ApplicationManagement from '../view/admin/ApplicationManagement.vue'
+
+
 
 
 // 마이페이지
 import MemberInfo from '../view/user/user_page/MemberInfo.vue'
 import WrittenList from '../view/user/WrittenList.vue'
 import ApplyMyPage from '../view/user/apply/ApplyMyPage.vue'
+
 
 
 export default createRouter({
@@ -32,6 +36,10 @@ export default createRouter({
         // AdminPage
         {   path: '/admin', component: AdminHome },
         {   path: '/policy', component: PolicyManagement },
+        {   path: '/applyManage', component: ApplicationManagement },
+      
+ 
+        
 
         // UserPage
         {   path: '/', component: UserHome },
