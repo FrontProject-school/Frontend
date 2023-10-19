@@ -1,5 +1,4 @@
 <script>
-import { stringifyQuery } from 'vue-router';
 
 export default {
     name: 'board_page',
