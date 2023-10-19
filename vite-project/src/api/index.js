@@ -1,10 +1,10 @@
-import { setInterceptors } from './common/interceptors';
+import { setInterceptors } from "./common/interceptors";
 
 const api = this.axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: "http://localhost:8000",
   headers: {
-    'Content-Type': 'application/json',
-  }
+    "Content-Type": "application/json",
+  },
 });
 
-export default api
+export default api;
