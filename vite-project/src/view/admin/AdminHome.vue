@@ -38,7 +38,7 @@ export default {
     </div>
     <div class="text-center w-3/4 mx-auto my-5 h-60 border-2 border-neutral-200 overflow-scroll">
       <div v-for="admin in adminList" :key="admin.no" class="flex justify-center p-5 border-b" >
-        <input type="checkBox" class="default:ring-2 mx-2"  v-model="selectOption"/> {{ admin.name }} <br />
+        <input type="checkBox" class="default:ring-2 mx-2"  /> {{ admin.name }} <br />
         <button class="mx-4 border px-2">임명</button>
       </div>
     </div>
