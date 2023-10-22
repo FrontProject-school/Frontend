@@ -20,7 +20,7 @@
             <label for="username" class="block mb-2 text-gray-700"
               >Username</label
             >
-            <input
+            <input  
               type="text"
               id="username"
               v-model="username"
