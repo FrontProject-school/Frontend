@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 
 // USER
 
@@ -12,4 +12,60 @@ import axios from "axios";
 
 // 유저 신청 현황 요청
 
-//
+
+
+import axios from "axios";
+
+// 신청 현황 요청 (USER)
+async function getUserApplicationStatus() {
+  try {
+    const response = await axios.get("URL_신청현황"); 
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error; 
+  }
+}
+
+// 유저 신청 요청 (USER)
+async function createUserApplication(applicationData) {
+  try {
+    const response = await axios.post("URL_유저신청", applicationData);
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error;
+  }
+}
+
+// 신청 취소 요청 (USER)
+async function cancelUserApplication(applicationId) {
+  try {
+    const response = await axios.delete(`URL_취소/${applicationId}`); 
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error;
+  }
+}
+
+// 유저 신청 현황 요청 (ADMIN)
+async function getAdminUserApplicationStatus() {
+  try {
+    const response = await axios.get("URL_유저신청현황"); 
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error;
+  }
+}
+
+getUserApplicationStatus()
+  .then(response => {
+    console.log("유저 신청 현황:", response.data);
+  })
+  .catch(error => {
+    console.error("에러 발생:", error);
+  });
+
+

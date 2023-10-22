@@ -1,10 +1,10 @@
-// import axios from "axios";
+import axios from "axios";
 
-// // 관리자 정보( 복수 )
-// async function getAdminData() {
-//   const { data } = await axios.get("");
-//   return data;
-// }
+// 관리자 정보( 복수 )
+async function getAdminData() {
+  const { data } = await axios.get("");
+  return data;
+}
 
 // // 전체 관리자 임명
 
@@ -22,7 +22,7 @@ import api from ".";
 
 
 
-const apiUrl = "http://127.0.0.1:8000/api"; 
+const apiUrl = "http://127.0.0.1:8000"; 
 
 
 // 관리자 정보 (복수)
