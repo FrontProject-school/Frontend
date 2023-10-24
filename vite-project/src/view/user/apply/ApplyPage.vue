@@ -51,15 +51,17 @@
     
     generateData() {
         
-        const url = 'https://jsonplaceholder.typicode.com/posts/1/comments';
+        //const url = 'http://jsonplaceholder.typicode.com/posts/1/comments';
+        const url = 'http://localhost:8000/api/program';
+
         axios
           .get(url)
           .then(response => {
             this.applyList = response.data.map(item => ({
-              id: item.id,
-              title: item.name,
-              startDate: item.startDate,
-              endDate: item.endDate,
+              id: item.info.id,
+              title: item.info.title,
+              startDate: item.info.rDate,
+              endDate: item.info.rDate,
             }));
           })
           .catch(error => {
