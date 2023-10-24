@@ -20,7 +20,7 @@ import axios from "axios";
 // 메인 페이지 요청
 async function getMainPage() {
   try {
-    const response = await axios.get("URL_메인페이지"); 
+    const response = await axios.get("/api/user/list"); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -31,7 +31,7 @@ async function getMainPage() {
 // 자기가 작성한 글 요청
 async function getMyList() {
   try {
-    const response = await axios.get("URL_자기가작성한글"); 
+    const response = await axios.get("/api/freeboards/{num}"); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -42,7 +42,7 @@ async function getMyList() {
 // 닉네임 중복 & 변경 요청
 async function checkAndChangeNickname(nickname) {
   try {
-    const response = await axios.put(`URL_닉네임/${nickname}`);
+    const response = await axios.put(`/api/user/update/{id}${nickname}`);
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -53,7 +53,7 @@ async function checkAndChangeNickname(nickname) {
 // 자기가 신청한 프로그램 요청
 async function getMyPrograms() {
   try {
-    const response = await axios.get("URL_자기가신청한프로그램"); 
+    const response = await axios.get("/api/applicant"); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -64,7 +64,7 @@ async function getMyPrograms() {
 // 회원 탈퇴 요청
 async function deleteUserAccount() {
   try {
-    const response = await axios.delete("URL_회원탈퇴"); 
+    const response = await axios.delete("/api/user/delete/{id}"); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);

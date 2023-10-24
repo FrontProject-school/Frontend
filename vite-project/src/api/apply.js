@@ -16,10 +16,10 @@
 
 import axios from "axios";
 
-// 신청 현황 요청 (USER)
+// 신청 현황 요청 
 async function getUserApplicationStatus() {
   try {
-    const response = await axios.get("URL_신청현황"); 
+    const response = await axios.get("/api/applicant"); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -27,10 +27,10 @@ async function getUserApplicationStatus() {
   }
 }
 
-// 유저 신청 요청 (USER)
+// 유저 신청 요청 
 async function createUserApplication(applicationData) {
   try {
-    const response = await axios.post("URL_유저신청", applicationData);
+    const response = await axios.post("/api/applicant", applicationData);
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -38,10 +38,10 @@ async function createUserApplication(applicationData) {
   }
 }
 
-// 신청 취소 요청 (USER)
+// 신청 취소 요청 
 async function cancelUserApplication(applicationId) {
   try {
-    const response = await axios.delete(`URL_취소/${applicationId}`); 
+    const response = await axios.delete(`/api/applicant/{id}/${applicationId}`); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -49,10 +49,10 @@ async function cancelUserApplication(applicationId) {
   }
 }
 
-// 유저 신청 현황 요청 (ADMIN)
+// 유저 신청 현황 요청 
 async function getAdminUserApplicationStatus() {
   try {
-    const response = await axios.get("URL_유저신청현황"); 
+    const response = await axios.get("/api/applicant"); 
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
