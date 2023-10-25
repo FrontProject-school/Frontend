@@ -93,6 +93,7 @@ export default {
       loginPost(this.username, this.password)
         .then((response) => {
           console.log(response);
+          this.$store.commit("setToken", response.token); // 토큰 셋팅
         })
 
         .catch((error) => {
