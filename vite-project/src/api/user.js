@@ -15,14 +15,16 @@
 // // 회원 탈퇴 요청
 
 import axios from "axios";
+import api from ".";
 // import api from ".";
 
 // 로그인 요청
 
-// 메인 페이지 요청
-async function getMainPage() {
+// 특정 유저 정보
+export async function getUserData() {
   try {
-    const response = await axios.get("/api/user/list");
+    const response = await api.get("/api/user/info");
+    console.log(response);
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -30,10 +32,11 @@ async function getMainPage() {
   }
 }
 
-// 자기가 작성한 글 요청
-async function getMyList() {
+// 메인 페이지 요청
+async function getMainPage() {
   try {
-    const response = await axios.get("/api/freeboards/{num}");
+    const response = await axios.get("/api/user/list");
+    console.log(response);
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -73,11 +76,3 @@ async function deleteUserAccount() {
     throw error;
   }
 }
-
-export {
-  getMainPage,
-  getMyList,
-  checkAndChangeNickname,
-  getMyPrograms,
-  deleteUserAccount,
-};

@@ -10,6 +10,7 @@
       <img :src="banner.imageUrl" :alt="banner.altText" />
     </div>
   </div>
+  <button @click="get()">dsfdsf</button>
 
   <!-- <div class="slide-show p-80 pt-20 pb-60 pl-65 relative">
     <div class="slide-show2 mb-30">
@@ -39,6 +40,8 @@
 </template>
 
 <script>
+import { getUserData } from "../../api/user.js";
+
 export default {
   name: "Carousel",
   data() {
@@ -82,6 +85,11 @@ export default {
   },
 
   methods: {
+    get() {
+      getUserData().then((response) => {
+        console.log(response);
+      });
+    },
     startSlideShow() {
       this.slideInterval = setInterval(() => {
         this.nextSlide();
