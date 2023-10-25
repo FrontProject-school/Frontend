@@ -27,10 +27,8 @@
 import axios from "axios";
 import api from "./index";
 
-
-
- // 공지사항 게시판 요청
-async function getNoticeBoard() {
+// 공지사항 게시판 요청
+export async function getNoticeBoard() {
   try {
     const response = await axios("/api/notices");
     return response.data;
@@ -40,12 +38,32 @@ async function getNoticeBoard() {
   }
 }
 
+// 게시글 읽기 요청
+export async function getNoticeRead(postId) {
+  try {
+    const response = await axios.get(`/api/notices/${postId}`);
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error;
+  }
+}
 
+// 문의사항 게시판 요청 아직 api주소가 없어서 요청을 못합니다
+// async function getInquiryBoard() {
+//   try {
+//     const response = await axios.get("");
+//     return response.data;
+//   } catch (error) {
+//     console.error("에러 발생:", error);
+//     throw error;
+//   }
+// }
 
 // 자유 게시판 요청
-async function getFreeBoard() {
+export async function getFreeBoard() {
   try {
-    const response = await axios.get("/api/freeboards/{num}");
+    const response = await axios.get("/api/freeboards");
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -68,7 +86,7 @@ async function searchPosts(query) {
 // 게시글 추가 요청
 async function createPost(postData) {
   try {
-    const response = await axios.post("/program", postData); 
+    const response = await axios.post("/program", postData);
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
@@ -111,13 +129,3 @@ async function getPost(postId) {
     throw error;
   }
 }
-
-export {
-  getNoticeBoard,
-  getFreeBoard,
-  searchPosts,
-  createPost,
-  updatePost,
-  deletePost,
-  getPost,
-};

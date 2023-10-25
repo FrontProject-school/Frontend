@@ -48,6 +48,7 @@
             <button
               type="submit"
               class="bg-green-700 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg"
+              @click="generateData()"
             >
               Login
             </button>
@@ -74,6 +75,8 @@
 </template>
 
 <script>
+import { loginPost } from "../../../api/login.js";
+
 export default {
   data() {
     return {
@@ -86,22 +89,17 @@ export default {
   },
 
   methods: {
-    
     generateData() {
+      loginPost(this.username, this.password)
+        .then((response) => {
+          console.log(response);
+        })
 
-        
-      loginPost().then((response) => {
-        console.log(response);
-      })
-    
-
-          .catch(error => {
-            console.error(error);
-          });
-      },
+        .catch((error) => {
+          console.error(error);
+        });
     },
-  methods: {
-   
+
     closeModalAndNavigateToLink(link) {
       this.showModal = false;
       this.$router.push(link);

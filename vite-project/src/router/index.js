@@ -38,7 +38,7 @@ export default createRouter({
     { path: "/board/notice", component: NoticeBoard },
     { path: "/board/bulletin", component: BulletinBoard },
     { path: "/board/require", component: RequireBoard },
-    { path: "/read", component: ReadPage, name: "read", props: true },
+    { path: "/read/:postId", component: ReadPage, name: "read", props: true },
     { path: "/apply", component: ApplyPage },
     { path: "/register", component: RegisterPage },
     { path: "/write", component: WritePage },

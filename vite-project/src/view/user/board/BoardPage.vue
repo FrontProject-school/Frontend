@@ -31,11 +31,13 @@ export default {
   },
   computed: {
     pageCount() {
-      let listLength = this.listArray.length,
-        listSize = this.pageSize,
-        page = Math.floor(listLength / listSize);
-      listLength % listSize > 0 ? (page += 1) : page;
-      return page;
+      if (this.listArray) {
+        let listLength = this.listArray.length,
+          listSize = this.pageSize,
+          page = Math.floor(listLength / listSize);
+        listLength % listSize > 0 ? (page += 1) : page;
+        return page;
+      }
     },
     paginatedData() {
       const start = this.pageNum * this.pageSize,
@@ -73,7 +75,7 @@ export default {
           >
             <td>{{ p.id }}</td>
             <td class="py-4">
-              <router-link :to="{ name: 'read', props: { postId: p.id } }">
+              <router-link :to="{ name: 'read', params: { postId: p.id } }">
                 <span v-if="checked"
                   >------------------------------------------</span
                 >
