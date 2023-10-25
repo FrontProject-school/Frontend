@@ -84,16 +84,24 @@ export default {
       showLogin: false,
     };
   },
+
   methods: {
-    // async login() {
-    //   try {
-    //     const token = await this.adminService.login(this.Obj);
-    //     this.$store.dispatch('setToken', token)
-    //   } catch (error) {
-    //     alert('로그인에 실패했습니다.');
-    //     location.reload();
-    //   }
-    // },
+    
+    generateData() {
+
+        
+      loginPost().then((response) => {
+        console.log(response);
+      })
+    
+
+          .catch(error => {
+            console.error(error);
+          });
+      },
+    },
+  methods: {
+   
     closeModalAndNavigateToLink(link) {
       this.showModal = false;
       this.$router.push(link);

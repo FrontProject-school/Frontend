@@ -1,9 +1,11 @@
 import axios from "axios";
 
+
+
 // 로그인
 async function loginPost(postData) {
     try {
-      const response = await axios.post("/login", postData); 
+      const response = await axios.post("/api/login", postData); 
       return response.data;
     } catch (error) {
       console.error("에러 발생:", error);
