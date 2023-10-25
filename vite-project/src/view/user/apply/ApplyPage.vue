@@ -57,7 +57,8 @@
         axios
           .get(url)
           .then(response => {
-            this.applyList = response.data.map(item => ({
+            this.applyList = response.data.programList.map(item => ({
+
               id: item.info.id,
               title: item.info.title,
               startDate: item.info.rDate,
