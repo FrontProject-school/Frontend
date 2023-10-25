@@ -1,7 +1,13 @@
 <script>
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
+import { getNoticeRead } from "../../../api/Board";
 export default {
   name: "read",
+  data() {
+    return {
+      post: {},
+    };
+  },
   components: {
     Menu,
     MenuButton,
@@ -10,9 +16,19 @@ export default {
   },
   props: {
     postId: {
-      type: String,
-      default: "",
+      type: Number,
+      default: 0,
     },
+  },
+  created() {
+    getNoticeRead(this.postId).then((res) => {
+      this.post = res.notice;
+      console.log(this.post);
+    });
+  },
+  mounted() {
+    console.log("postId:", this.postId);
+    // postId 값 사용
   },
   // 컴포넌트 로직 작성
 };
@@ -22,10 +38,10 @@ export default {
   <div class="container w-3/5 mx-auto">
     <div class="lg">
       <div class="my-3">
-        <h1 class="text-2xl">제목</h1>
+        <h1 class="text-2xl">{{ post.title }}</h1>
         <hr />
         <div class="flex justify-between mt-5">
-          <div class="font-semibold">작성자 : 글쓴이</div>
+          <div class="font-semibold">작성자 : {{ post.adminId }}</div>
           <!-- vue - dropdown -->
           <Menu as="div" class="relative inline-block text-left">
             <div>
@@ -97,13 +113,12 @@ export default {
 
       <!-- CONTENT -->
       <div class="" style="min-height: 400px">
-        <div>content</div>
+        <div>{{ post.content }}</div>
       </div>
 
       <!-- COMMENT -->
       <div class="my-3">
         <h1 class="ml-1">댓글 목록</h1>
-        <h1>{{ $route.params.postId }} ㅓ</h1>
         <div class="border-t border-black my-2"></div>
 
         <!-- Read COMMENT -->
