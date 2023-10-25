@@ -25,11 +25,12 @@
 // export { getNoticeBoard };
 
 import axios from "axios";
+import api from "./index";
 
 // 공지사항 게시판 요청
 async function getNoticeBoard() {
   try {
-    const response = await axios.get("/api/notices");
+    const response = await axios("/api/notices");
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
