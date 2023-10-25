@@ -27,6 +27,16 @@ async function getUserApplicationStatus() {
   }
 }
 
+async function createGet() {
+  try {
+    const response = await axios.get("/api/program"); 
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error;
+  }
+}
+
 // 유저 신청 요청 
 async function createUserApplication(applicationData) {
   try {
@@ -60,12 +70,14 @@ async function getAdminUserApplicationStatus() {
   }
 }
 
-getUserApplicationStatus()
-  .then(response => {
-    console.log("유저 신청 현황:", response.data);
-  })
-  .catch(error => {
-    console.error("에러 발생:", error);
-  });
+// getUserApplicationStatus()
+//   .then(response => {
+//     console.log("유저 신청 현황:", response.data);
+//   })
+//   .catch(error => {
+//     console.error("에러 발생:", error);
+//   });
 
-
+export{
+  createGet,
+}
