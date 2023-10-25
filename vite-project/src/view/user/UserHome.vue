@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="slide-show p-80 pt-20 pb-60 pl-65 relative">
+  <!-- <div class="slide-show p-80 pt-20 pb-60 pl-65 relative">
     <div class="slide-show2 mb-30">
       <h2 class="text-3xl font-bold inline-block ml-96 relative">
         공 지 사 항
@@ -35,7 +35,7 @@
         </router-link>
       </li>
     </ol>
-  </div>
+  </div> -->
 </template>
 
 <script>

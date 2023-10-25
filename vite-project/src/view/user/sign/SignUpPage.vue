@@ -20,7 +20,7 @@
             <label for="username" class="block mb-2 text-gray-700"
               >Username</label
             >
-            <input
+            <input  
               type="text"
               id="username"
               v-model="username"
@@ -76,6 +76,8 @@
 </template>
     
     <script>
+import axios from 'axios';
+// import { response } from 'express';
 export default {
   data() {
     return {
@@ -93,12 +95,27 @@ export default {
         return;
       }
 
+      // const userDate = {
+      //   username:this.username,
+      //   email:this.email,
+      //   password:this.password
+      // };
+
+      // axios.post('/api/regist',userDate)
+      // .then(response => {
+      //   console.log(response.data.message);
+      // })
+
+      // .catch(error => {
+      //   console.error('API 요청 오류:',error);
+      // })
+
       // 회원가입 처리 로직을 구현합니다.
       console.log("사용자 이름:", this.username);
       console.log("이메일:", this.email);
       console.log("비밀번호:", this.password);
 
-      // 회원가입 완료 후 모달을 닫습니다.
+      // 회원가입 완료 후 모달을 닫습니다.  
       this.closeModal();
     },
     closeModal() {
