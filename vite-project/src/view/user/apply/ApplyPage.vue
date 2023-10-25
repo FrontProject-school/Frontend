@@ -36,6 +36,8 @@
   
   <script>
   import axios from 'axios'
+  import { createGet } from '../../../api/apply.js'
+  
   
   
   export default {
@@ -50,14 +52,11 @@
     methods: {
     
     generateData() {
-        
-        //const url = 'http://jsonplaceholder.typicode.com/posts/1/comments';
-        const url = 'http://localhost:8000/api/program';
 
-        axios
-          .get(url)
-          .then(response => {
-            this.applyList = response.data.programList.map(item => ({
+        
+      createGet().then((response) => {
+        console.log(response);
+            this.applyList = response.programList.map(item => ({
 
               id: item.info.id,
               title: item.info.title,
