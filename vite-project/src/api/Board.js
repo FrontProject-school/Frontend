@@ -40,16 +40,7 @@ async function getNoticeBoard() {
   }
 }
 
-// 문의사항 게시판 요청 아직 api주소가 없어서 요청을 못합니다
-// async function getInquiryBoard() {
-//   try {
-//     const response = await axios.get("");
-//     return response.data;
-//   } catch (error) {
-//     console.error("에러 발생:", error);
-//     throw error;
-//   }
-// }
+
 
 // 자유 게시판 요청
 async function getFreeBoard() {
@@ -123,7 +114,6 @@ async function getPost(postId) {
 
 export {
   getNoticeBoard,
-  getInquiryBoard,
   getFreeBoard,
   searchPosts,
   createPost,
