@@ -1,5 +1,4 @@
- <template>
-  
+<template>
   <div class="carousel">
     <div
       class="banner"
@@ -16,7 +15,9 @@
     <div class="slide-show2 mb-30">
       <h2 class="text-3xl font-bold inline-block ml-96 relative">
         공 지 사 항
-        <span class="absolute bg-teal-500 w-10 h-10 rounded-full z-[-1] -top-1/2 -right-5 transform translate-y-1/8"></span>
+        <span
+          class="absolute bg-teal-500 w-10 h-10 rounded-full z-[-1] -top-1/2 -right-5 transform translate-y-1/8"
+        ></span>
       </h2>
     </div>
   </div>
@@ -29,10 +30,7 @@
         class="mr-1 mb-2 bg-white border border-gray-300 p-20 border-b-2"
         :class="{ active: currentSlide === index }"
       >
-        <router-link
-          to="/read"
-          class="block border-b-2 border-green-500"
-        >
+        <router-link to="/read" class="block border-b-2 border-green-500">
           {{ item }}
         </router-link>
       </li>
@@ -41,7 +39,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Carousel",
   data() {
@@ -74,6 +71,7 @@ export default {
       slideDuration: 2000,
     };
   },
+  created() {},
 
   mounted() {
     this.startSlideShow();
@@ -93,7 +91,8 @@ export default {
       this.currentSlide = (this.currentSlide + 1) % this.banners.length;
     },
     prevSlide() {
-      this.currentSlide = (this.currentSlide - 1 + this.banners.length) % this.banners.length;
+      this.currentSlide =
+        (this.currentSlide - 1 + this.banners.length) % this.banners.length;
     },
   },
 };

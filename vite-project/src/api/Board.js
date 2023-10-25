@@ -2,9 +2,7 @@ import axios from "axios";
 
 // 공지사항 게시판 요청
 async function getNoticeBoard() {
-  const { data } = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts"
-  );
+  const { data } = await axios.get("http://localhost:8000/api/notices");
   return data;
 }
 

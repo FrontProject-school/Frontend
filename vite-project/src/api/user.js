@@ -1,4 +1,7 @@
 import axios from "axios";
+// import api from ".";
+
+// 로그인 요청
 
 // 메인 페이지 요청
 
@@ -13,3 +16,5 @@ async function getMyList() {
 // 자기가 신청한 프로그램 요청
 
 // 회원 탈퇴 요청
+
+// 특정 유저 정보
