@@ -1,10 +1,17 @@
 <script>
+import { mapState } from "vuex";
+
 export default {
-  data() {
-    return {
-      adminBar: false,
-      isLogin: false,
-    };
+  methods: {
+    check() {
+      console.log(this.isUserLoggedIn);
+    },
+  },
+  computed: {
+    ...mapState(["user", "token"]),
+    isUserLoggedIn() {
+      return this.user !== null && this.token !== "";
+    },
   },
 };
 </script>
@@ -18,6 +25,7 @@ export default {
           alt="logo"
           style="width: 70px; height: 70px"
           class="me-6"
+          @click="check()"
         />
       </router-link>
       <div v-if="adminBar" class="lg:flex lg:gap-x-16 lg:justify-start">
@@ -87,17 +95,19 @@ export default {
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end bottom-0">
           <router-link
-            to="/modal"
-            v-if="!isLogin"
-            class="text-m font-semibold leading-6 text-gray-900"
-            >Log in</router-link
-          >
-          <router-link
             to="/memberInfo"
+            v-if="isUserLoggedIn"
+            class="text-m font-semibold leading-6 text-gray-900"
+          >
+            마이페이지
+          </router-link>
+          <router-link
+            to="/modal"
             v-else
             class="text-m font-semibold leading-6 text-gray-900"
-            >마이페이지</router-link
           >
+            Log in
+          </router-link>
         </div>
       </div>
     </nav>

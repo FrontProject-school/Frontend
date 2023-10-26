@@ -1,13 +1,6 @@
 // import axios from "axios";
 
-// // 관리자 정보( 복수 )
-// async function getAdminData() {
-//   const { data } = await axios.get("");
-//   return data;
-// }
-
 // // 전체 관리자 임명
-
 
 // // 관리자 추가
 
@@ -15,20 +8,14 @@
 
 // // 약관 읽기 요청
 
-
-
 import axios from "axios";
 import api from ".";
 
-
-
-const apiUrl = ""; 
-
-
 // 관리자 정보 (복수)
-async function getAdminData() {
+export async function getAdminData() {
   try {
-    const response = await axios.get(`/api/admin`);
+    const response = await api.get(`/api/admin`);
+    console.log(response);
     return response.data;
   } catch (error) {
     console.error("관리자 정보를 가져오는 중 오류 발생:", error);
@@ -80,25 +67,14 @@ async function getTerms() {
   }
 }
 
-
-
-
 async function fetchData() {
   try {
     const adminData = await getAdminData();
     console.log("관리자 정보:", adminData);
 
-
-
     const terms = await getTerms();
     console.log("약관 내용:", terms);
-
- 
   } catch (error) {
     console.error("API 요청 중 오류 발생:", error);
   }
 }
-
-
-fetchData();
-
