@@ -1,4 +1,3 @@
-// import { setInterceptors } from "./common/interceptors";
 import axios from "axios";
 import store from "../store/index.js";
 
@@ -13,9 +12,8 @@ api.interceptors.request.use(async (config) => {
   const token = store.state.token;
 
   if (token) {
-    config.headers.Authorization = `${token}`;
+    config.headers.Authorization = `Bearer ${token}`;
   }
-  console.log(token);
 
   return config;
 });

@@ -15,16 +15,19 @@
 // // 회원 탈퇴 요청
 
 import axios from "axios";
-import api from ".";
+import api from "./";
+import store from "../store";
 // import api from ".";
 
 // 로그인 요청
 
 // 특정 유저 정보
 export async function getUserData() {
+  console.log(api);
   try {
     const response = await api.get("/api/user/info");
     console.log(response);
+    console.log(store.state.token);
     return response.data;
   } catch (error) {
     console.error("에러 발생:", error);
