@@ -50,15 +50,15 @@ export async function getNoticeRead(postId) {
 }
 
 // 문의사항 게시판 요청 아직 api주소가 없어서 요청을 못합니다
-// async function getInquiryBoard() {
-//   try {
-//     const response = await axios.get("");
-//     return response.data;
-//   } catch (error) {
-//     console.error("에러 발생:", error);
-//     throw error;
-//   }
-// }
+export async function getInquiryBoard() {
+  try {
+    const response = await axios.get("/api/questions");
+    return response.data;
+  } catch (error) {
+    console.error("에러 발생:", error);
+    throw error;
+  }
+}
 
 // 자유 게시판 요청
 export async function getFreeBoard() {
