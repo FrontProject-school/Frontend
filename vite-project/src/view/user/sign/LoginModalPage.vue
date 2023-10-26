@@ -91,9 +91,13 @@ export default {
   methods: {
     generateData() {
       loginPost(this.username, this.password)
-        .then((response) => {
+        .then(async (response) => {
           console.log(response);
-          this.$store.commit("setToken", response.token); // 토큰 셋팅
+          const token = response.token;
+          const user = response.user;
+          await this.$store.dispatch("loginUser", { token, user }); // loginUser 액션 호출
+          // this.$store.commit("setToken", response.token); // 토큰
+          // this.$store.commit("setUsername", response.name); // 이름
         })
 
         .catch((error) => {

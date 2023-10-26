@@ -3,24 +3,31 @@ import { createStore } from "vuex";
 export default createStore({
   state() {
     return {
-      username: "",
+      user: null,
       token: "",
     };
   },
   getters: {
     isLogin(state) {
-      return state.username !== "";
+      return state.username !== "", state.token !== "";
     },
   },
   mutations: {
-    setUsername(state, username) {
-      state.username = username;
+    setUser(state, user) {
+      state.username = user;
     },
     setToken(state, token) {
       state.token = token;
     },
-    clearUsername(state) {
-      state.username = "";
+  },
+  actions: {
+    loginUser({ commit }, { token, user }) {
+      commit("setToken", token);
+      commit("setUser", user);
+    },
+    logoutUser({ commit }) {
+      commit("setToken", null);
+      commit("setUser", null);
     },
   },
 });
